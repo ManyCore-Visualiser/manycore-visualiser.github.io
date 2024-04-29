@@ -1,0 +1,44 @@
+---
+import Link from "./Hero/Link.astro";
+---
+
+<div
+  class="w-full h-[80svh] relative flex items-center justify-center bg-zinc-900 overflow-clip"
+>
+  <div
+    class="absolute top-0 left-0 bottom-0 right-0 bg-gradient-to-b from-indigo-700 via-sky-600 to-indigo-700 bg-cool"
+  >
+  </div>
+
+  <h1 class="relative text-5xl font-extrabold text-white">
+    Visualise <span id="typer">Thing</span> in a few clicks
+  </h1>
+</div>
+<div
+  class="w-full bg-white justify-center items-center flex flex-row py-2 text-zinc-700 shadow-md divide-x-2"
+>
+  <Link link="#info" content="Info" />
+  <Link link="#download" content="Download" />
+  <Link link="#manual" content="Manual" />
+</div>
+
+<style>
+  .bg-cool {
+    mask-image: url(mask.svg);
+    mask-position: center;
+    mask-size: cover;
+
+    /* background-position: 0% 20%; */
+    background-size: 100% 300%;
+    animation: move 5s ease infinite;
+  }
+
+  @keyframes move {
+    0% {
+      background-position: 0% 0%;
+    }
+    100% {
+      background-position: 0% 300%;
+    }
+  }
+</style>

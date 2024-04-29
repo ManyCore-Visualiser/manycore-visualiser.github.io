@@ -1,0 +1,40 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  variant: "Linux" | "macOS" | "Windows";
+}
+
+const { variant } = Astro.props;
+
+const getIcon = () => {
+  switch (variant) {
+    case "macOS":
+      return "mdi:apple";
+    case "Linux":
+      return "ant-design:linux-outlined";
+    case "Windows":
+      return "mdi:microsoft-windows";
+  }
+};
+---
+
+<button
+  class="btn flex items-center justify-center px-4 py-2 rounded-md bg-indigo-500 border-2 border-indigo-700 text-white lg:text-lg hover:scale-110 hover:-translate-y-1 transition-transform"
+>
+  Download for {variant}{" "}
+  <span class="ml-2">
+    <Icon name={getIcon()} />
+  </span></button
+>
+
+<script>
+  document.querySelectorAll(".btn")?.forEach((btn) => {
+    btn.addEventListener("click", (ev) => {
+      ev.preventDefault();
+      alert(
+        "Public download links will be released soon. Please keep checking!"
+      );
+    });
+  });
+</script>
