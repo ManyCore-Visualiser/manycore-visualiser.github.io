@@ -7,9 +7,11 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="ManyCore Visualiser" description="">
   <main>
     <Hero />
-    <section id="info" class="grid grid-cols-[60%_40%] px-5">
+    <section id="info" class="grid md:grid-cols-[60%_40%] px-5 gap-4">
       <div>
-        <h2 class="text-5xl font-bold">What is ManyCore Visualiser?</h2>
+        <h2 class="text-2xl lg:text-5xl font-bold">
+          What is ManyCore Visualiser?
+        </h2>
         <p class="text-lg text-justify pt-4">
           ManyCore Visualiser is a tool designed to improve the design flow of a
           ManyCore System. It provides various utilities to visualise the state
@@ -20,21 +22,24 @@ import Layout from "../layouts/Layout.astro";
           it in a publication.
         </p>
       </div>
-        <img src="/render.png" class="object-contain w-3/4 self-center mx-auto"/>
+      <img
+        src="/render.png"
+        class="md:col-start-2 object-contain w-3/4 self-center mx-auto"
+      />
     </section>
     <section
       id="download"
       class="flex flex-col items-center justify-center bg-zinc-200 py-20 shadow-md"
     >
-      <h2 class="text-5xl font-bold">Download</h2>
+      <h2 class="text-2xl lg:text-5xl font-bold">Download</h2>
       <div class="w-1/2 grid md:grid-cols-3 gap-10 pt-10">
         <DownloadButton variant="Windows" />
         <DownloadButton variant="macOS" />
         <DownloadButton variant="Linux" />
       </div>
     </section>
-    <section id="manual" class="flex flex-col items-center justify-center">
-      <h2 class="text-5xl font-bold">Get the manual</h2>
+    <section id="manual" class="flex flex-col items-center justify-center px-5">
+      <h2 class="text-2xl lg:text-5xl font-bold">Get the manual</h2>
       <p class="text-lg pt-4">
         The ManyCore Visualier user manual is currently under construction.
         Please check again soon!
